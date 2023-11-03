@@ -22,15 +22,13 @@ li.on("dblclick", function crossOut() {
   li.toggleClass("strike");
 });
 
-  let crossOutButton = document.createElement("crossOutButton");
-  crossOutButton.appendChild(document.createTextNode("X"));
-  li.appendChild(crossOutButton);
+// I am adding delete button
 
-  crossOutButton.addEventListener("click", deleteListItem);
+let crossOutButton = $('<crossOutButton></crossOutButton>');
+crossOutButton.append(document.createTextNode('X'));
+li.append(crossOutButton);
 
-  function deleteListItem(){
-    li.classList.add("delete")
-  }
+
 
   $('#list').sortable();
 
