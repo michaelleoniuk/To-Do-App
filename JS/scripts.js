@@ -1,16 +1,16 @@
 function newItem(){
 
-  let li = document.createElement("li");
-  let inputValue = document.getElementById("input").value;
-  let text = document.createTextNode(inputValue);
-  li.appendChild(text);
+//I am adding new item to the list
 
-  if (inputValue === '') {
-    alert("You must write something!");
-  } else {
-    let list = document.querySelector('#list');
-    list.appendChild(li);
-  }
+let li = $('<li></li>');
+let inputValue = $('#input').val();
+li.append(inputValue);
+
+if (inputValue === '') {
+  alert("You must write something!");
+} else {
+  $('#list').append(li);
+}
 
   function crossOut() {
     li.classList.toggle("strike");
