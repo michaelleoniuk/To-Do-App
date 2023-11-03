@@ -12,11 +12,15 @@ if (inputValue === '') {
   $('#list').append(li);
 }
 
-  function crossOut() {
-    li.classList.toggle("strike");
-  }
+// I am adding crossOut funtionality
 
-  li.addEventListener("dblclick",crossOut);
+function crossOut() {
+  li.toggleClass("strike");
+}
+
+li.on("dblclick", function crossOut() {
+  li.toggleClass("strike");
+});
 
   let crossOutButton = document.createElement("crossOutButton");
   crossOutButton.appendChild(document.createTextNode("X"));
